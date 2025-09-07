@@ -136,7 +136,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>🚀 Simple Java Web App</h1>
+        <h1>🚀 Sample Java Web App - Krishna Sarikonda</h1>
         <p class="subtitle">Welcome to our Maven-powered web application!</p>
         
         <div class="nav-links">
