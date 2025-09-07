@@ -22,7 +22,7 @@ stages{
         stage ('Deployments'){
                     steps {
                         echo "Deploying the Artifacts into tomcat Server"
-                        deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: '39c655ec-260f-4e06-8988-3c03f17ef416', path: '', url: 'http://34.201.160.90:8080')], contextPath: null, war: '**/*.war'
+			deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat-credentials', path: '', url: 'http://34.201.160.90:8080')], contextPath: null, onFailure: false, war: '**/*.war'
                     }
             }
         }
