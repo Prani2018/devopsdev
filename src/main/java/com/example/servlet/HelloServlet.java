@@ -33,7 +33,7 @@ public class HelloServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Hello Servlet</title>");
+            out.println("<title>Hello Servlet from krishna Sarikonda</title>");
             out.println("<style>");
             out.println("body { font-family: Arial, sans-serif; margin: 50px; }");
             out.println("h1 { color: #333; }");
@@ -41,7 +41,7 @@ public class HelloServlet extends HttpServlet {
             out.println("</style>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Hello, " + name + "!</h1>");
+            out.println("<h1> Greetings from Krishna Sarikonda !!! Hello, " + name + "!</h1>");
             out.println("<div class='info'>");
             out.println("<p><strong>Current Time:</strong> " + new Date() + "</p>");
             out.println("<p><strong>Server Info:</strong> " + getServletContext().getServerInfo() + "</p>");
