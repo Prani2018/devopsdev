@@ -1,3 +1,4 @@
+
 pipeline {
     agent {
         label 'JavaBuildServer'
@@ -22,9 +23,7 @@ stages{
         stage ('Deployments'){
                     steps {
                         echo "Deploying the Artifacts into tomcat Server"
-						withCredentials([usernamePassword(credentialsId: 'tomcat-credentials', usernameVariable: 'tomcat', passwordVariable: 'tomcat123')]) {
-                    sh "curl -u tomcat:tomcat123 -X PUT 'http://34.200.235.60:8080/manager/text/deploy?path=/your-app-name&update=true' -T target/*.war"
-			
+                        deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: '39c655ec-260f-4e06-8988-3c03f17ef416', path: '', url: 'http://23.22.211.197:8080')], contextPath: null, war: '**/*.war'
                     }
             }
         }
