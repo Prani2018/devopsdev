@@ -13,7 +13,7 @@ pipeline {
             steps {
                 // Deploys via HTTP to the remote Tomcat Manager
                 // 'tomcat9' works for Tomcat 9.x. Use 'tomcat8' for 8.x
-                deploy adapters: [tomcat9(url: 'http://3.144.165.155:8080/', credentialsId: 'tomcat-remote-creds')],
+                deploy adapters: [tomcat9(url: 'http://3.27.89.233:8080/', credentialsId: 'tomcat-remote-creds')],
                        contextPath: 'simple-web-app', 
                        war: 'simple-web-app.war'
             }
