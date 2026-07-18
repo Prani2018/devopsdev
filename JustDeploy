@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout Code') {
+            steps {
+                // Downloads the simple-web-app.war from your repo
+                git branch: 'main', url: 'https://github.com/Prani2018/devopsdev.git'
+            }
+        }
+
+        stage('Deploy to Remote Tomcat') {
+            steps {
+                // Deploys via HTTP to the remote Tomcat Manager
+                // 'tomcat9' works for Tomcat 9.x. Use 'tomcat8' for 8.x
+                deploy adapters: [tomcat9(url: 'http://3.144.165.155:8080/', credentialsId: 'tomcat-remote-creds')],
+                       contextPath: 'simple-web-app', 
+                       war: 'simple-web-app.war'
+            }
+        }
+    }
+}
